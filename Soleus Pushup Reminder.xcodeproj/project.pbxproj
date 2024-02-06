@@ -12,6 +12,11 @@
 		FF7E98492B6DBDB900A882E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E98482B6DBDB900A882E1 /* ContentView.swift */; };
 		FF7E984B2B6DBDBB00A882E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7E984A2B6DBDBB00A882E1 /* Assets.xcassets */; };
 		FF7E984E2B6DBDBB00A882E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7E984D2B6DBDBB00A882E1 /* Preview Assets.xcassets */; };
+		FF7E985F2B72DC6C00A882E1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E985E2B72DC6C00A882E1 /* WidgetKit.framework */; };
+		FF7E98612B72DC6C00A882E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E98602B72DC6C00A882E1 /* SwiftUI.framework */; };
+		FF7E98642B72DC6C00A882E1 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E98632B72DC6C00A882E1 /* Complication.swift */; };
+		FF7E98662B72DC6E00A882E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7E98652B72DC6E00A882E1 /* Assets.xcassets */; };
+		FF7E986A2B72DC6E00A882E1 /* ComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FF7E985C2B72DC6C00A882E1 /* ComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +26,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = FF7E98402B6DBDB900A882E1;
 			remoteInfo = "Soleus Pushup Reminder Watch App";
+		};
+		FF7E98682B72DC6E00A882E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7E98352B6DBDB900A882E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF7E985B2B72DC6C00A882E1;
+			remoteInfo = ComplicationExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +48,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7E986E2B72DC6E00A882E1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FF7E986A2B72DC6E00A882E1 /* ComplicationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +68,12 @@
 		FF7E98482B6DBDB900A882E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF7E984A2B6DBDBB00A882E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF7E984D2B6DBDBB00A882E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FF7E985C2B72DC6C00A882E1 /* ComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7E985E2B72DC6C00A882E1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FF7E98602B72DC6C00A882E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FF7E98632B72DC6C00A882E1 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
+		FF7E98652B72DC6E00A882E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF7E98672B72DC6E00A882E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +84,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7E98592B72DC6C00A882E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7E98612B72DC6C00A882E1 /* SwiftUI.framework in Frameworks */,
+				FF7E985F2B72DC6C00A882E1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				FF7E98452B6DBDB900A882E1 /* Soleus Pushup Reminder Watch App */,
+				FF7E98622B72DC6C00A882E1 /* Complication */,
+				FF7E985D2B72DC6C00A882E1 /* Frameworks */,
 				FF7E983C2B6DBDB900A882E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +111,7 @@
 			children = (
 				FF7E983B2B6DBDB900A882E1 /* Soleus Pushup Reminder.app */,
 				FF7E98412B6DBDB900A882E1 /* Soleus Pushup Reminder Watch App.app */,
+				FF7E985C2B72DC6C00A882E1 /* ComplicationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +133,25 @@
 				FF7E984D2B6DBDBB00A882E1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FF7E985D2B72DC6C00A882E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF7E985E2B72DC6C00A882E1 /* WidgetKit.framework */,
+				FF7E98602B72DC6C00A882E1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF7E98622B72DC6C00A882E1 /* Complication */ = {
+			isa = PBXGroup;
+			children = (
+				FF7E98632B72DC6C00A882E1 /* Complication.swift */,
+				FF7E98652B72DC6E00A882E1 /* Assets.xcassets */,
+				FF7E98672B72DC6E00A882E1 /* Info.plist */,
+			);
+			path = Complication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,15 +181,34 @@
 				FF7E983D2B6DBDB900A882E1 /* Sources */,
 				FF7E983E2B6DBDB900A882E1 /* Frameworks */,
 				FF7E983F2B6DBDB900A882E1 /* Resources */,
+				FF7E986E2B72DC6E00A882E1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF7E98692B72DC6E00A882E1 /* PBXTargetDependency */,
 			);
 			name = "Soleus Pushup Reminder Watch App";
 			productName = "Soleus Pushup Reminder Watch App";
 			productReference = FF7E98412B6DBDB900A882E1 /* Soleus Pushup Reminder Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FF7E985B2B72DC6C00A882E1 /* ComplicationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7E986B2B72DC6E00A882E1 /* Build configuration list for PBXNativeTarget "ComplicationExtension" */;
+			buildPhases = (
+				FF7E98582B72DC6C00A882E1 /* Sources */,
+				FF7E98592B72DC6C00A882E1 /* Frameworks */,
+				FF7E985A2B72DC6C00A882E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComplicationExtension;
+			productName = ComplicationExtension;
+			productReference = FF7E985C2B72DC6C00A882E1 /* ComplicationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -145,6 +224,9 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					FF7E98402B6DBDB900A882E1 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					FF7E985B2B72DC6C00A882E1 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -164,6 +246,7 @@
 			targets = (
 				FF7E983A2B6DBDB900A882E1 /* Soleus Pushup Reminder */,
 				FF7E98402B6DBDB900A882E1 /* Soleus Pushup Reminder Watch App */,
+				FF7E985B2B72DC6C00A882E1 /* ComplicationExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +268,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7E985A2B72DC6C00A882E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7E98662B72DC6E00A882E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,6 +288,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7E98582B72DC6C00A882E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7E98642B72DC6C00A882E1 /* Complication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -204,6 +303,11 @@
 			isa = PBXTargetDependency;
 			target = FF7E98402B6DBDB900A882E1 /* Soleus Pushup Reminder Watch App */;
 			targetProxy = FF7E98432B6DBDB900A882E1 /* PBXContainerItemProxy */;
+		};
+		FF7E98692B72DC6E00A882E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF7E985B2B72DC6C00A882E1 /* ComplicationExtension */;
+			targetProxy = FF7E98682B72DC6E00A882E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -325,6 +429,7 @@
 		FF7E98522B6DBDBB00A882E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +460,7 @@
 		FF7E98532B6DBDBB00A882E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +522,67 @@
 			};
 			name = Release;
 		};
+		FF7E986C2B72DC6E00A882E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N8W95QN26;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Complication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Complication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.billgrace.Soleus-Pushup-Reminder.watchkitapp.Complication";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		FF7E986D2B72DC6E00A882E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N8W95QN26;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Complication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Complication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.billgrace.Soleus-Pushup-Reminder.watchkitapp.Complication";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +609,15 @@
 			buildConfigurations = (
 				FF7E98562B6DBDBB00A882E1 /* Debug */,
 				FF7E98572B6DBDBB00A882E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7E986B2B72DC6E00A882E1 /* Build configuration list for PBXNativeTarget "ComplicationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7E986C2B72DC6E00A882E1 /* Debug */,
+				FF7E986D2B72DC6E00A882E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
