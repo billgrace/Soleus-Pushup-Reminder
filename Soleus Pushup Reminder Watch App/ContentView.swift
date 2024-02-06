@@ -9,15 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var sessionIsRunning = false
+    @State private var sessionIsActive = true
     @State private var sessionStartHour = 12
     @State private var sessionStartMinute = 0
     @State private var sessionFinishHour = 16
     @State private var sessionFinishMinute = 0
     @State private var minutesBetweenAlerts = 5
-    @State private var count = 0
+    @State private var timerInterruptCount = 0
+    @State private var reminderCount = 0
     
-    let timer = Timer.publish(every: 2, on: .main, in: .default).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     
     var body: some View {
         NavigationStack {
@@ -52,18 +53,21 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
                 HStack {
-                    Text(sessionIsRunning ? "Running" : "Paused")
+                    Text(sessionIsActive ? "Running" : "Paused")
                     Text(nowIsWithinSessionTime() ? "active" : "dormant")
                 }
                 Button("Toggle running") {
-                    sessionIsRunning.toggle()
+                    sessionIsActive.toggle()
                 }
-//                .sensoryFeedback(.success, trigger: count)
             }
-            .sensoryFeedback(.success, trigger: count)
+            .sensoryFeedback(.success, trigger: reminderCount)
             .onReceive(timer, perform: { _ in
-                if sessionIsRunning && nowIsWithinSessionTime() {
-                    count += 1
+                timerInterruptCount += 1
+                if timerInterruptCount >= (60 * minutesBetweenAlerts) {
+                    timerInterruptCount = 0
+                    if sessionIsActive && nowIsWithinSessionTime() {
+                        reminderCount += 1
+                    }
                 }
             })
         }
